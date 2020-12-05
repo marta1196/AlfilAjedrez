@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.alfilajedrez;
 
+import org.iesalandalus.programacion.utilidades.Entrada;
+
 public class MainApp {
 
 	private static Alfil alfil;
@@ -25,5 +27,15 @@ public class MainApp {
 		System.out.println("3.Crear un afil de un color en una columna inicial (c o f)");
 		System.out.println("4.Mover el alfil");
 		System.out.println("5.Salir");
+	}
+
+	private static int elegirOpcion() {
+
+		int opcionMenuPrincipal;
+
+		mostrarMenu();
+		opcionMenuPrincipal = Entrada.entero();
+
+		return opcionMenuPrincipal;
 	}
 }
