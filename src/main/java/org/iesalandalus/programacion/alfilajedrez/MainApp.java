@@ -8,6 +8,15 @@ public class MainApp {
 
 	private static Alfil alfil;
 	private static boolean exit=false;
+	
+	public static void main(String[] args) {
+
+		while (!exit) {
+
+			ejecutarOpcion(elegirOpcion());
+			System.out.println("\n");
+		}
+	}
 
 	private static void mostrarAlfil() {
 
