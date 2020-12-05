@@ -26,6 +26,27 @@ public class Alfil {
 
 	}
 
+	public Alfil(Color color, char columna) {
+
+		setColor(color);
+
+		if (columna == 'c' || columna == 'f') {
+
+			if (color.equals(Color.BLANCO)) {
+
+				setPosicion(new Posicion(1, columna));
+
+			} else if (color.equals(Color.NEGRO)) {
+
+				setPosicion(new Posicion(8, columna));
+			}
+
+		} else {
+
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
+		}
+	}
+
 	private void setPosicion(Posicion posicion) {
 
 		this.posicion = posicion;
