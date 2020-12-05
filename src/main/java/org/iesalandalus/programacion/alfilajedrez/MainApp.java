@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.alfilajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class MainApp {
@@ -105,6 +107,31 @@ public class MainApp {
 		} while (columnaInicial != 'c' && columnaInicial != 'f');
 
 		return columnaInicial;
+	}
+
+	private static void mover() {
+
+		Direccion direccion;
+		int pasos;
+
+		if (alfil == null) {
+			System.out.println("Lo siento pero esa opción no esta permitida");
+
+		} else {
+			System.out.println("introduzca cuantos pasos quiere dar:");
+			pasos = Entrada.entero();
+
+			direccion = elegirDireccion();
+
+			try {
+
+				alfil.mover(direccion, pasos);
+
+			} catch (OperationNotSupportedException e) {
+
+				System.out.println(e.getMessage());
+			}
+		}
 	}
 
 	private static void mostrarMenuDirecciones() {
