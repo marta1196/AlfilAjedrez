@@ -38,4 +38,38 @@ public class MainApp {
 
 		return opcionMenuPrincipal;
 	}
+
+	private static Color elegirColor() {
+
+		Color color = null;
+		int opcionColor = 0;
+
+		do {
+			System.out.println("Introduzca una opción para escoger el color del alfil:");
+			System.out.println("1.Blanco");
+			System.out.println("2.Negro");
+
+			opcionColor = Entrada.entero();
+
+			switch (opcionColor) {
+
+			case 1:
+
+				color = Color.BLANCO;
+				break;
+
+			case 2:
+
+				color = Color.NEGRO;
+				break;
+
+			default:
+				System.out.println("Lo siento pero esa opción no esta permitida");
+				break;
+			}
+
+		} while (opcionColor != 1 && opcionColor != 2);
+
+		return color;
+	}
 }
