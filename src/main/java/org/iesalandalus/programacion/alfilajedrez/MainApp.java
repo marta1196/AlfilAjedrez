@@ -7,6 +7,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 public class MainApp {
 
 	private static Alfil alfil;
+	private static boolean exit=false;
 
 	private static void mostrarAlfil() {
 
@@ -39,6 +40,47 @@ public class MainApp {
 		opcionMenuPrincipal = Entrada.entero();
 
 		return opcionMenuPrincipal;
+	}
+	
+private static void ejecutarOpcion(int opcionMenuPrincipal) {	
+		
+		switch (opcionMenuPrincipal) {
+
+		case 1:
+
+			crearAlfilDefecto();
+			mostrarAlfil();
+			break;
+
+		case 2:
+
+			crearAlfilColor();
+			mostrarAlfil();
+			break;
+
+		case 3:
+
+			crearAlfilColorColumna();
+			mostrarAlfil();
+			break;
+
+		case 4:
+
+			mover();
+			mostrarAlfil();
+			break;
+
+		case 5:
+
+			System.out.println("fin del programa");
+			exit = true;
+			break;
+
+		default:
+
+			System.out.println("Lo siento pero esa opción no esta permitida");
+			break;
+		}
 	}
 
 	private static void crearAlfilDefecto() {
