@@ -44,6 +44,11 @@ public class MainApp {
 		alfil = new Alfil();
 	}
 
+	private static void crearAlfilColor() {
+
+		alfil = new Alfil(elegirColor());
+	}
+
 	private static Color elegirColor() {
 
 		Color color = null;
