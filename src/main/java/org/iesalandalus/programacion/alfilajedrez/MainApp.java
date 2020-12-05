@@ -91,4 +91,13 @@ public class MainApp {
 
 		return columnaInicial;
 	}
+
+	private static void mostrarMenuDirecciones() {
+
+		System.out.println("Introduzca una opción:");
+		System.out.println("1.Arriba a la derecha");
+		System.out.println("2.Abajo a la derecha");
+		System.out.println("3.Abajo a la izquierda");
+		System.out.println("4.Arriba a la izquierda");
+	}
 }
