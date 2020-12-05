@@ -5,6 +5,12 @@ public class Alfil {
 	private Posicion posicion;
 	private Color color;
 
+	public Alfil() {
+
+		setColor(Color.NEGRO);
+		setPosicion(new Posicion(8, 'f'));
+	}
+
 	private void setPosicion(Posicion posicion) {
 
 		this.posicion = posicion;
