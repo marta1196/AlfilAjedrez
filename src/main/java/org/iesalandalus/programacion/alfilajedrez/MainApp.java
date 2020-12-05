@@ -39,6 +39,11 @@ public class MainApp {
 		return opcionMenuPrincipal;
 	}
 
+	private static void crearAlfilDefecto() {
+
+		alfil = new Alfil();
+	}
+
 	private static Color elegirColor() {
 
 		Color color = null;
