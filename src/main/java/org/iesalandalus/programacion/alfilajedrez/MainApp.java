@@ -83,6 +83,11 @@ public class MainApp {
 		return color;
 	}
 
+	private static void crearAlfilColorColumna() {
+
+		alfil = new Alfil(elegirColor(), elegirColumnaInicial());
+	}
+
 	private static char elegirColumnaInicial() {
 
 		char columnaInicial;
