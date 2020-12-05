@@ -100,4 +100,47 @@ public class MainApp {
 		System.out.println("3.Abajo a la izquierda");
 		System.out.println("4.Arriba a la izquierda");
 	}
+
+	private static Direccion elegirDireccion() {
+		
+		Direccion direccion = null;
+		int opcionMenuDireccion = 0;
+		
+		do {
+			mostrarMenuDirecciones();
+
+			opcionMenuDireccion = Entrada.entero();
+
+			switch (opcionMenuDireccion) {
+
+			case 1:
+
+				direccion = Direccion.ARRIBA_DERECHA;
+				break;
+
+			case 2:
+
+				direccion = Direccion.ABAJO_DERECHA;
+				break;
+
+			case 3:
+
+				direccion = Direccion.ABAJO_IZQUIERDA;
+				break;
+
+			case 4:
+
+				direccion = Direccion.ARRIBA_IZQUIERDA;
+				break;
+
+			default:
+
+				System.out.println("Lo siento pero esa opción no esta permitida");
+				break;
+			}
+
+		} while (opcionMenuDireccion < 1 || opcionMenuDireccion > 4);
+
+		return direccion;
+	}
 }
