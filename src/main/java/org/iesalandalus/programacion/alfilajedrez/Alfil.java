@@ -171,4 +171,8 @@ public class Alfil {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "fila=" + posicion.getFila() + ", columna=" + posicion.getColumna() + ", color=" + color;
+	}
 }
