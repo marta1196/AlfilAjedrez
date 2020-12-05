@@ -72,4 +72,23 @@ public class MainApp {
 
 		return color;
 	}
+
+	private static char elegirColumnaInicial() {
+
+		char columnaInicial;
+
+		do {
+
+			System.out.println("Introduzca c o f para elegir columna inicial del alfil: ");
+			columnaInicial = Entrada.caracter();
+
+			if (columnaInicial != 'c' && columnaInicial != 'f') {
+
+				System.out.println("Lo siento pero esa opción no esta permitida");
+			}
+
+		} while (columnaInicial != 'c' && columnaInicial != 'f');
+
+		return columnaInicial;
+	}
 }
